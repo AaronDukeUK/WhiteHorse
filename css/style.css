@@ -1,0 +1,807 @@
+
+body {
+  font-family: 'Playfair Display', serif;
+  color: #222222;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Cinzel', serif;
+  font-weight: bold;
+  height: 7.5em;
+  position: fixed;
+  width: 100vw;
+  transition: all 1s ease-in;
+  z-index: 1000;
+  background-color: #f5f5f5;
+  padding: 0 40px;
+  border-bottom: 1px solid grey;
+  flex-wrap: wrap;
+}
+
+nav > .title {
+  color: #444;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title > .wh {
+  font-size: 3em;
+  font-weight: 900;
+  text-shadow: 1px 1px 2px grey;
+}
+
+.title > .whunder {
+  text-shadow: 1px 1px 1px grey;
+  font-size: 1.8em;
+  font-family: 'Playfair Display', serif;
+}
+
+nav > .menuButton {
+  color: #444;
+  padding: 10px;
+  border: 2px solid #444;
+  border-radius: 5px;
+  margin-right: 120px;
+  transition: 0.5s all linear;
+  font-size: 1.5em;
+}
+
+nav > .menuButton:hover {
+  background-color: grey;
+  transition: 0.5s all linear;
+  color: white;
+}
+
+nav > #mobileNav {
+  display: flex;
+  position: absolute;
+  top: 132px;
+  right: -200px;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5em;
+  justify-content: space-between;
+  height: 250px;
+  background-color: #999;
+  opacity: 0.9;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 10px 0;
+  transition: 0.5s all ease;
+}
+
+nav > #mobileNav.view {
+right: 105px;
+transition: 0.5s all ease;
+}
+
+nav > #mobileNav > li {
+  padding: 20px;
+  text-align: center;
+}
+
+nav > #mobileNav > li > a {
+  padding: 10px;
+  color: white;
+  transition: 0.5s all linear;
+  border-radius: 5px;
+}
+nav > #mobileNav > li > a:hover {
+  background-color: grey;
+  transition: 0.5s all linear;
+  color: white;
+}
+
+
+
+.banner {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/view-min.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+}
+
+.socialHead {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: auto;
+  padding: 20px 40px;
+  color: white;
+  font-size: 1.75em;
+  opacity: 0.9;
+  font-weight: bold;
+  border: 2px solid white;
+  background-color: #999;
+  text-align: center;
+  margin-top: 40px;
+  border-radius: 5px;
+
+}
+
+.socialHead > ul {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid white;
+}
+
+.socialHead > ul > a {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.socialHead > ul > a:not(:first-child) {
+  margin: 0 0 0 20px;
+}
+
+.facebook, .twitter, .instagram {
+  fill: white;
+  transition: 0.5s all linear;
+}
+
+.facebook:hover, .twitter:hover, .instagram:hover {
+  fill: #444;
+  transition: 0.5s all linear;
+}
+
+.socialHead > h3 {
+  width: 100%;
+}
+
+.lead {
+  width: auto;
+  padding: 20px;
+  color: white;
+  font-size: 1.75em;
+  opacity: 0.9;
+  font-weight: bold;
+  border: 2px solid white;
+  padding: 20px;
+  background-color: #999;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.lead > h3 > a {
+  color: white;
+  display: block;
+  transition: 0.5s all linear;
+}
+
+.lead > h3 > a:hover {
+  color: #444;
+  transition: 0.5s all linear;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 100px 0;
+  border-top: 2px solid grey;
+  border-bottom: 2px solid #444;
+  background-color: #f5f5f5;
+}
+
+.main > h2 {
+  margin-top: 80px;
+  color: #444;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.main > a {
+  padding: 20px 40px;
+  color: #444;
+  font-size: 1.25em;
+  opacity: 0.9;
+  font-weight: bold;
+  border: 2px solid #444;
+  text-align: center;
+  margin-top: 40px;
+  border-radius: 5px;
+  transition: 0.5s all linear;
+}
+
+.main > a:hover {
+  background-color: grey;
+  transition: 0.5s all linear;
+  color: white;
+}
+
+.menu {
+  height: auto;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  box-shadow: 0px 5px 5px 5px grey;
+  background-image: url("../img/ep_naturalwhite.png");
+  background-repeat: repeat;
+  text-align: center;
+}
+
+.menu > h2 {
+  margin: 20px 40px 20px 40px;
+  font-size: 2em;
+  font-style: italic;
+}
+
+.menu > h3 {
+  margin: 40px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.menu > p {
+  margin: 4px;
+  font-size: 1.25em;
+}
+
+.menu > p:last-child {
+  padding: 60px 0;
+  font-style: italic;
+}
+
+.reviews {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  background-image: url("../img/IMG_7135-min.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.reviews2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  background-image: url("../img/IMG_7142-min.JPG");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.reviewItem {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 2em;
+  max-width: 80%;
+  color: white;
+  font-weight: bold;
+  opacity: 0.9;
+  border: 2px solid white;
+  padding: 40px;
+  background-color: #999;
+  border-radius: 5px;
+}
+
+.photos {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #f5f5f5;
+}
+
+.photos > .items {
+  width: 25%;
+  height: 300px;
+  display: flex;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.photos > .items:nth-child(1) {
+  background: url('../img/IMG_6914-min2.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.photos > .items:nth-child(2) {
+  background: url('../img/IMG_6771-min2.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.photos > .items:nth-child(3) {
+  background: url('../img/IMG_6847-min2.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.photos > .items:nth-child(4) {
+  background: url('../img/IMG_6907-min2.JPG');
+  background-position: center;
+  background-size: cover;
+}
+
+.photos > .items:nth-child(5) {
+  background: url('../img/IMG_6832-min2.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.photos > .items:nth-child(6) {
+  background: url('../img/Dessert with coffee-min2.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.photos > .items:nth-child(7) {
+  background: url('../img/sausage-min2.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.photos > .items:nth-child(8) {
+  background: url('../img/pork-min2.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.photos > .items:nth-child(9) {
+  background: url('../img/roast-min2.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.photos > .items:nth-child(10) {
+  background: url('../img/soup-min2.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.photos > .items:nth-child(11) {
+  background: url('../img/bar-min2.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.photos > .items:nth-child(12) {
+  background: url('../img/view-min2.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.photos > .items > .linkItem {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: all 0.75s ease-in;
+  background-color: rgba(38, 39, 47, 0.6);
+}
+
+.photos > .items > .linkItem:hover {
+  background-color: rgba(38, 39, 47, 0);
+  transition: all 0.75s ease-in;
+}
+
+
+
+.contact {
+  display: flex;
+  flex: row;
+  padding: 50px;
+  background-color: #f5f5f5;
+  border-top: 2px solid #444;
+  border-bottom: 2px solid #444;
+  align-items: flex-start;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.contact h3 {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.contact p {
+  font-size: 1.25em;
+  padding: 2px;
+}
+
+.contact > .hours, .contact > .foodHours, .contact > .info {
+  padding: 40px;
+  margin-bottom: 20px;
+  border: 2px solid #444;
+  border-radius: 5px;
+  height: 400px;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e5e5e5;
+  transition: all 0.75s ease-in;
+}
+
+.contact > .info {
+  justify-content: space-around;
+  text-decoration: none;
+}
+
+.contact a {
+  color: #222;
+}
+
+.contact > .hours:hover, .contact > .foodHours:hover, .contact > .info:hover {
+  transition: all 0.75s ease-in;
+  background-color: #f5f5f5;
+}
+
+
+
+
+.footSocial > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  padding: 20px;
+}
+
+.footLinks {
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footLinks > p {
+  margin: 10px;
+}
+
+.footLinks > p > a {
+  color: #333;
+  text-decoration: none;
+  transition: 0.5s all linear;
+
+}
+
+.footLinks > p > a:hover {
+  color: #999;
+  transition: 0.5s all linear;
+
+}
+
+.facebookFoot, .twitterFoot, .instagramFoot, .tripFoot {
+  fill: #555;
+  transition: 0.5s all linear;
+}
+
+.facebookFoot:hover, .twitterFoot:hover, .instagramFoot:hover, .tripFoot:hover {
+  fill: #999;
+  transition: 0.5s all linear;
+}
+
+.footer > #button {
+	width: 85px;
+	height: 25px;
+	border-top: white 2px solid;
+  border-left: white 2px solid;
+  border-right: white 2px solid;
+	margin: 0 auto;
+	position: relative;
+  transition: all 1s ease;
+  background: grey;
+  opacity: 0.9;
+  text-align: center;
+  color: white;
+  margin-left: 90%;
+}
+
+.footer > #button:hover {
+  transition: all 2s ease-in;
+	position: relative;
+}
+
+.footer > #button > p {
+  padding: 5px;
+}
+
+.footer {
+	bottom: 0;
+	left: 0;
+	position: fixed;
+  width: 100%;
+  height: 1.8em;
+  overflow: hidden;
+  margin: 0 auto;
+  transition: all 1s ease;
+	z-index: 999;
+}
+
+.footer:hover {
+  transition: all 1s ease;
+	height: 180px;
+}
+
+.footer > #container {
+	width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+	background: #f5f5f5;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-family: 'Cinzel', serif;
+  font-weight: bold;
+  font-size: 1.2em;
+  flex-wrap: wrap;
+  overflow: hidden;
+  border-top: 2px solid grey;
+  border-bottom: 2px solid grey;
+}
+
+@media (max-width: 1000px) {
+  .title > .wh {
+    font-size: 2.4em;
+  }
+  .title > .whunder {
+    font-size: 1.5em;
+  }
+  nav > ul {
+    font-size: 1.2em;
+  }
+
+  .socialHead {
+    font-size: 1.5em;
+  }
+  .lead {
+    font-size: 1.5em;
+  }
+
+  .menu {
+    font-size: 1.2em;
+    width: 90%;
+  }
+  .menu > h3 {
+    font-size: 1.4em;
+  }
+
+  .reviewItem {
+    font-size: 1.5em;
+  }
+
+  .photos > .items {
+    width: 33.33%;
+  }
+
+  .contact {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .contact h3 {
+    font-size: 1.5em;
+  }
+  .contact p {
+    font-size: 1.4em;
+  }
+  .contact > .hours, .contact > .foodHours, .contact > .info {
+    width: 50%;
+  }
+}
+
+
+@media (max-width: 800px) {
+
+  .title > .wh {
+    font-size: 2.5em;
+  }
+  .title > .whunder {
+    font-size: 1.5em;
+  }
+  nav > ul {
+    font-size: 1.2em;
+  }
+
+  .socialHead {
+    font-size: 1.4em;
+  }
+  .lead {
+    font-size: 1.4em;
+  }
+
+  .menu {
+    font-size: 1.2em;
+    width: 90%;
+  }
+  .menu > h3 {
+    font-size: 1.4em;
+  }
+
+  .reviewItem {
+    font-size: 1.5em;
+  }
+
+  .photos > .items {
+    width: 50%;
+  }
+
+  .contact {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .contact h3 {
+    font-size: 1.5em;
+  }
+  .contact p {
+    font-size: 1.4em;
+  }
+
+  .footer > #button {
+    margin-left: 80%;
+  }
+}
+
+@media (max-width: 500px) {
+  nav {
+    height: 120px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 0;
+  }
+
+  nav > .menuButton {
+    margin: 0;
+    font-size: 1.2em;
+  }
+
+  nav > #mobileNav {
+    top: 140px;
+    font-size: 1.4em;
+    height: auto;
+
+  }
+
+  nav > #mobileNav > li {
+    padding: 10px;
+    text-align: center;
+  }
+
+  nav > #mobileNav > li > a {
+    padding: 5px 10px;
+    color: white;
+    transition: 0.5s all linear;
+    border-radius: 5px;
+  }
+
+  .title > .wh {
+    font-size: 1.5em;
+  }
+  .title > .whunder {
+    font-size: 1em;
+  }
+
+  .socialHead {
+    font-size: 1.25em;
+    width: 100%;
+    min-height: 200px;
+  }
+
+  .socialHead > h3 {
+    margin-top: -60px;
+  }
+  .lead {
+    font-size: 1.25em;
+    width: 100%;
+  }
+
+  .menu {
+    font-size: 1.2em;
+    width: 100%;
+    padding: 5px;
+  }
+  .menu > h3 {
+    font-size: 1.4em;
+  }
+
+  .menu > p {
+    font-size: 1.4em;
+    line-height: 25px;
+    width: 90%;
+  }
+
+  .reviewItem {
+    font-size: 1.4em;
+    width: 100%;
+  }
+
+  .photos > .items {
+    width: 100%;
+    height: 200px;
+  }
+
+  .contact {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .contact h3 {
+    font-size: 1.4em;
+  }
+  .contact p {
+    font-size: 1.2em;
+  }
+
+  .contact > .hours, .contact > .foodHours, .contact > .info {
+    width: 100%;
+  }
+
+  .email > p > a {
+    font-size: 1em;
+  }
+
+  .footer {
+    text-align: center;
+  }
+
+  .footLinks {
+    margin-bottom: 50px;
+  }
+
+  .footer:hover {
+    height: 16em;
+  }
+
+  .footer > #button {
+    margin-left: 60%;
+  }
+
+  .footSocial > ul {
+    padding: 20px;
+    width: 200px;
+  }
+}
