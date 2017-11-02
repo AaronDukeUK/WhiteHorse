@@ -1,4 +1,3 @@
-
 body {
   font-family: 'Playfair Display', serif;
   font-size: 100%;
@@ -14,98 +13,130 @@ header {
 }
 
 nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   font-family: 'Cinzel', serif;
   font-weight: bold;
   min-height: 10%;
   position: fixed;
   width: 100%;
+  -webkit-transition: all 1s ease-in;
   transition: all 1s ease-in;
   z-index: 1000;
   background-color: #f5f5f5;
   padding: 0 40px;
   border-bottom: 1px solid grey;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
-nav > .title {
+nav>.title {
   color: #444;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
-.title > .wh {
+.title>.wh {
   font-size: 2.5em;
   font-weight: 600;
 }
 
-.title > .whunder {
+.title>.whunder {
   font-size: 1.5em;
   font-family: 'Playfair Display', serif;
 }
 
-nav > .menuButton {
+nav>.menuButton {
   color: #444;
   padding: 10px;
   border: 2px solid #444;
   border-radius: 5px;
   margin-right: 8%;
+  -webkit-transition: 0.5s all linear;
   transition: 0.5s all linear;
   font-size: 1.5em;
 }
 
-nav > .menuButton:hover {
+nav>.menuButton:hover {
   background-color: grey;
+  -webkit-transition: 0.5s all linear;
   transition: 0.5s all linear;
   color: white;
 }
 
-nav > #mobileNav {
+nav>#mobileNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: absolute;
   top: 120%;
   right: -50%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   font-size: 1.5em;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   max-height: 250px;
   background-color: #999;
   opacity: 0.9;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
   border: 2px solid white;
   border-radius: 5px;
   padding: 10px 0;
+  -webkit-transition: 0.5s all ease;
   transition: 0.5s all ease;
 }
 
-nav > #mobileNav.view {
-right: 10%;
-transition: 0.5s all ease;
+nav>#mobileNav.view {
+  right: 10%;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
 }
 
-nav > #mobileNav > li {
+nav>#mobileNav>li {
   padding: 20px;
   text-align: center;
 }
 
-nav > #mobileNav > li > a {
+nav>#mobileNav>li>a {
   padding: 10px;
   color: white;
+  -webkit-transition: 0.5s all linear;
   transition: 0.5s all linear;
   border-radius: 5px;
 }
-nav > #mobileNav > li > a:hover {
+
+nav>#mobileNav>li>a:hover {
   background-color: grey;
+  -webkit-transition: 0.5s all linear;
   transition: 0.5s all linear;
   color: white;
 }
-
-
 
 .banner {
   width: 100%;
@@ -114,61 +145,84 @@ nav > #mobileNav > li > a:hover {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   overflow: hidden;
 }
 
 .socialHead {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: auto;
   padding: 20px 40px;
   color: white;
   font-size: 1.5em;
   opacity: 0.9;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
   font-weight: bold;
   border: 2px solid white;
   background-color: #999;
   text-align: center;
   margin-top: 40px;
   border-radius: 5px;
-
 }
 
-.socialHead > ul {
+.socialHead>ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
   margin-bottom: 20px;
   padding-bottom: 20px;
   border-bottom: 2px solid white;
 }
 
-.socialHead > ul > a {
+.socialHead>ul>a {
   display: block;
   height: 100%;
   width: 100%;
 }
 
-.socialHead > ul > a:not(:first-child) {
+.socialHead>ul>a:not(:first-child) {
   margin: 0 0 0 20px;
 }
 
 .facebook, .twitter, .instagram {
   fill: white;
+  -webkit-transition: 0.5s all linear;
   transition: 0.5s all linear;
 }
 
 .facebook:hover, .twitter:hover, .instagram:hover {
   fill: #444;
+  -webkit-transition: 0.5s all linear;
   transition: 0.5s all linear;
 }
 
-.socialHead > h3 {
+.socialHead>h3 {
   width: 100%;
 }
 
@@ -178,6 +232,7 @@ nav > #mobileNav > li > a:hover {
   color: white;
   font-size: 1.5em;
   opacity: 0.9;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
   font-weight: bold;
   border: 2px solid white;
   padding: 20px;
@@ -186,22 +241,32 @@ nav > #mobileNav > li > a:hover {
   border-radius: 5px;
 }
 
-.lead > h3 > a {
+.lead>h3>a {
   color: white;
   display: block;
+  -webkit-transition: 0.5s all linear;
   transition: 0.5s all linear;
 }
 
-.lead > h3 > a:hover {
+.lead>h3>a:hover {
   color: #444;
+  -webkit-transition: 0.5s all linear;
   transition: 0.5s all linear;
 }
 
 .main {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
   padding: 100px 0;
   border-top: 2px solid grey;
@@ -209,28 +274,31 @@ nav > #mobileNav > li > a:hover {
   background-color: #f5f5f5;
 }
 
-.main > h2 {
+.main>h2 {
   margin-top: 80px;
   color: #444;
   font-size: 1.5em;
   font-weight: bold;
 }
 
-.main > a {
+.main>a {
   padding: 20px 40px;
   color: #444;
   font-size: 1.25em;
   opacity: 0.9;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
   font-weight: bold;
   border: 2px solid #444;
   text-align: center;
   margin-top: 40px;
   border-radius: 5px;
+  -webkit-transition: 0.5s all linear;
   transition: 0.5s all linear;
 }
 
-.main > a:hover {
+.main>a:hover {
   background-color: grey;
+  -webkit-transition: 0.5s all linear;
   transition: 0.5s all linear;
   color: white;
 }
@@ -238,9 +306,18 @@ nav > #mobileNav > li > a:hover {
 .menu {
   height: auto;
   max-width: 1000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   padding: 50px 20px;
   box-shadow: 0px 5px 5px 5px grey;
@@ -249,33 +326,42 @@ nav > #mobileNav > li > a:hover {
   text-align: center;
 }
 
-.menu > h2 {
+.menu>h2 {
   margin: 20px 40px 20px 40px;
   font-size: 1.5em;
   font-style: italic;
 }
 
-.menu > h3 {
+.menu>h3 {
   margin: 40px;
   font-size: 1.25em;
   font-weight: bold;
 }
 
-.menu > p {
+.menu>p {
   margin: 4px;
   font-size: 1em;
 }
 
-.menu > p:last-child {
+.menu>p:last-child {
   padding: 60px 0;
   font-style: italic;
 }
 
 .reviews {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   min-height: 60vh;
   background-image: url("../img/IMG_7135-min.jpg");
@@ -287,9 +373,18 @@ nav > #mobileNav > li > a:hover {
 
 .reviews2 {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   min-height: 60vh;
   background-image: url("../img/IMG_7142-min.JPG");
@@ -301,15 +396,24 @@ nav > #mobileNav > li > a:hover {
 
 .reviewItem {
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
   font-size: 1.5em;
   max-width: 80%;
   color: white;
   font-weight: bold;
   opacity: 0.9;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
   border: 2px solid white;
   padding: 40px;
   background-color: #999;
@@ -317,118 +421,135 @@ nav > #mobileNav > li > a:hover {
 }
 
 .photos {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-flow: row wrap;
   flex-flow: row wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   width: 100%;
   background-color: #f5f5f5;
 }
 
-.photos > .items {
+.photos>.items {
   width: 25%;
   height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
 }
 
-.photos > .items:nth-child(1) {
+.photos>.items:nth-child(1) {
   background: url('../img/IMG_6914-min2.jpg');
   background-position: center;
   background-size: cover;
 }
 
-.photos > .items:nth-child(2) {
+.photos>.items:nth-child(2) {
   background: url('../img/IMG_6771-min2.jpg');
   background-position: center;
   background-size: cover;
 }
 
-.photos > .items:nth-child(3) {
+.photos>.items:nth-child(3) {
   background: url('../img/IMG_6847-min2.jpg');
   background-position: center;
   background-size: cover;
 }
 
-.photos > .items:nth-child(4) {
+.photos>.items:nth-child(4) {
   background: url('../img/IMG_6907-min2.JPG');
   background-position: center;
   background-size: cover;
 }
 
-.photos > .items:nth-child(5) {
+.photos>.items:nth-child(5) {
   background: url('../img/IMG_6832-min2.jpg');
   background-position: center;
   background-size: cover;
 }
 
-.photos > .items:nth-child(6) {
+.photos>.items:nth-child(6) {
   background: url('../img/Dessert with coffee-min2.jpg');
   background-position: center;
   background-size: cover;
 }
 
-.photos > .items:nth-child(7) {
+.photos>.items:nth-child(7) {
   background: url('../img/sausage-min2.jpg');
   background-position: center;
   background-size: cover;
 }
 
-.photos > .items:nth-child(8) {
+.photos>.items:nth-child(8) {
   background: url('../img/pork-min2.jpg');
   background-position: center;
   background-size: cover;
 }
 
-.photos > .items:nth-child(9) {
+.photos>.items:nth-child(9) {
   background: url('../img/roast-min2.jpg');
   background-position: center;
   background-size: cover;
 }
 
-.photos > .items:nth-child(10) {
+.photos>.items:nth-child(10) {
   background: url('../img/soup-min2.jpg');
   background-position: center;
   background-size: cover;
 }
 
-.photos > .items:nth-child(11) {
+.photos>.items:nth-child(11) {
   background: url('../img/bar-min2.jpg');
   background-position: center;
   background-size: cover;
 }
 
-.photos > .items:nth-child(12) {
+.photos>.items:nth-child(12) {
   background: url('../img/view-min2.jpg');
   background-position: center;
   background-size: cover;
 }
 
-.photos > .items > .linkItem {
+.photos>.items>.linkItem {
   display: block;
   width: 100%;
   height: 100%;
+  -webkit-transition: all 0.75s ease-in;
   transition: all 0.75s ease-in;
   background-color: rgba(38, 39, 47, 0.6);
 }
 
-.photos > .items > .linkItem:hover {
+.photos>.items>.linkItem:hover {
   background-color: rgba(38, 39, 47, 0);
+  -webkit-transition: all 0.75s ease-in;
   transition: all 0.75s ease-in;
 }
 
-
-
 .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: row;
+  -ms-flex: row;
   flex: row;
   padding: 50px;
   background-color: #f5f5f5;
   border-top: 2px solid #444;
   border-bottom: 2px solid #444;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   text-align: center;
 }
@@ -444,7 +565,7 @@ nav > #mobileNav > li > a:hover {
   padding: 2px;
 }
 
-.contact > .hours, .contact > .foodHours, .contact > .info {
+.contact>.hours, .contact>.foodHours, .contact>.info {
   padding: 40px;
   margin-bottom: 20px;
   border: 2px solid #444;
@@ -452,15 +573,26 @@ nav > #mobileNav > li > a:hover {
   height: 400px;
   width: 25%;
   max-width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background-color: #e5e5e5;
+  -webkit-transition: all 0.75s ease-in;
   transition: all 0.75s ease-in;
 }
 
-.contact > .info {
+.contact>.info {
+  -ms-flex-pack: distribute;
   justify-content: space-around;
   text-decoration: none;
 }
@@ -469,113 +601,145 @@ nav > #mobileNav > li > a:hover {
   color: #222;
 }
 
-.contact > .hours:hover, .contact > .foodHours:hover, .contact > .info:hover {
+.contact>.hours:hover, .contact>.foodHours:hover, .contact>.info:hover {
+  -webkit-transition: all 0.75s ease-in;
   transition: all 0.75s ease-in;
   background-color: #f5f5f5;
 }
 
-
-
-
-.footSocial > ul {
+.footSocial>ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 300px;
   padding: 20px;
 }
 
 .footLinks {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
-.footLinks > p {
+.footLinks>p {
   margin: 10px;
 }
 
-.footLinks > p > a {
+.footLinks>p>a {
   color: #333;
   text-decoration: none;
+  -webkit-transition: 0.5s all linear;
   transition: 0.5s all linear;
-
 }
 
-.footLinks > p > a:hover {
+.footLinks>p>a:hover {
   color: #999;
+  -webkit-transition: 0.5s all linear;
   transition: 0.5s all linear;
-
 }
 
 .facebookFoot, .twitterFoot, .instagramFoot, .tripFoot {
   fill: #555;
+  -webkit-transition: 0.5s all linear;
   transition: 0.5s all linear;
 }
 
 .facebookFoot:hover, .twitterFoot:hover, .instagramFoot:hover, .tripFoot:hover {
   fill: #999;
+  -webkit-transition: 0.5s all linear;
   transition: 0.5s all linear;
 }
 
-.footer > #button {
-	width: 85px;
-	height: 25px;
-	border-top: white 2px solid;
+.footer>#button {
+  width: 85px;
+  height: 25px;
+  border-top: white 2px solid;
   border-left: white 2px solid;
   border-right: white 2px solid;
-	margin: 0 auto;
-	position: relative;
+  margin: 0 auto;
+  position: relative;
+  -webkit-transition: all 1s ease;
   transition: all 1s ease;
   background: grey;
   opacity: 0.9;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
   text-align: center;
   color: white;
   left: 40%;
 }
 
-.footer > #button:hover {
+.footer>#button:hover {
+  -webkit-transition: all 2s ease-in;
   transition: all 2s ease-in;
-	position: relative;
+  position: relative;
 }
 
-.footer > #button > p {
+.footer>#button>p {
   padding: 5px;
 }
 
 .footer {
-	bottom: 0;
-	left: 0;
-	position: fixed;
+  bottom: 0;
+  left: 0;
+  position: fixed;
   width: 100%;
   height: 1.8em;
   overflow: hidden;
   margin: 0 auto;
+  -webkit-transition: all 1s ease;
   transition: all 1s ease;
-	z-index: 999;
+  z-index: 999;
 }
 
 .footer:hover {
+  -webkit-transition: all 1s ease;
   transition: all 1s ease;
-	height: 180px;
+  height: 180px;
 }
 
-.footer > #container {
-	width: 100%;
+.footer>#container {
+  width: 100%;
   height: 100%;
   position: relative;
   top: 0;
   left: 0;
-	background: #f5f5f5;
+  background: #f5f5f5;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   font-family: 'Cinzel', serif;
   font-weight: bold;
   font-size: 1.2em;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   overflow: hidden;
   border-top: 2px solid grey;
@@ -583,59 +747,55 @@ nav > #mobileNav > li > a:hover {
 }
 
 @media (max-width: 1280px) {
-  .title > .wh {
+  .title>.wh {
     font-size: 2em;
   }
-  .title > .whunder {
+  .title>.whunder {
     font-size: 1.25em;
   }
-
-  nav > .menuButton {
+  nav>.menuButton {
     font-size: 1.25em;
   }
-
-  nav > #mobileNav {
+  nav>#mobileNav {
     font-size: 1.25em;
   }
-
   .socialHead {
     font-size: 1.25em;
   }
   .lead {
     font-size: 1.25em;
   }
-
-  .main > h2 {
+  .main>h2 {
     font-size: 1.25em;
   }
-
-  .main > a {
+  .main>a {
     font-size: 1em;
   }
-
-  .menu > h2 {
+  .menu>h2 {
     font-size: 1.5em;
   }
-
-  .menu > h3 {
+  .menu>h3 {
     font-size: 1.25em;
   }
-
-  .menu > p {
+  .menu>p {
     font-size: 1em;
   }
-
   .reviewItem {
     font-size: 1.25em;
   }
-
-  .photos > .items {
+  .photos>.items {
     width: 33.33%;
   }
-
   .contact {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
     align-items: center;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
   }
   .contact h3 {
@@ -644,68 +804,61 @@ nav > #mobileNav > li > a:hover {
   .contact p {
     font-size: 1.25em;
   }
-
-  .contact > .hours, .contact > .foodHours, .contact > .info {
+  .contact>.hours, .contact>.foodHours, .contact>.info {
     width: auto;
   }
 }
 
-
 @media (max-width: 980px) {
-
-  .title > .wh {
+  .title>.wh {
     font-size: 2.5em;
   }
-  .title > .whunder {
+  .title>.whunder {
     font-size: 1.5em;
   }
-
-  nav > .menuButton {
+  nav>.menuButton {
     font-size: 1.5em;
   }
-
-  nav > #mobileNav {
+  nav>#mobileNav {
     font-size: 1.5em;
   }
-
   .socialHead {
     font-size: 1.5em;
   }
   .lead {
     font-size: 1.5em;
   }
-
-  .main > h2 {
+  .main>h2 {
     font-size: 1.25em;
   }
-
-  .main > a {
+  .main>a {
     font-size: 1em;
   }
-
-  .menu > h2 {
+  .menu>h2 {
     font-size: 2em;
   }
-
-  .menu > h3 {
+  .menu>h3 {
     font-size: 1.5em;
   }
-
-  .menu > p {
+  .menu>p {
     font-size: 1.25em;
   }
-
   .reviewItem {
     font-size: 1.5em;
   }
-
-  .photos > .items {
+  .photos>.items {
     width: 50%;
   }
-
   .contact {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
     align-items: center;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
   }
   .contact h3 {
@@ -714,344 +867,271 @@ nav > #mobileNav > li > a:hover {
   .contact p {
     font-size: 1.5em;
   }
-
 }
 
 @media (max-width: 740px) {
-
-
-  .title > .wh {
+  .title>.wh {
     font-size: 2.5em;
   }
-  .title > .whunder {
+  .title>.whunder {
     font-size: 1.5em;
   }
-
-  nav > .menuButton {
+  nav>.menuButton {
     font-size: 1.5em;
   }
-
-  nav > #mobileNav {
+  nav>#mobileNav {
     font-size: 1.5em;
   }
-
-  nav > #mobileNav.view {
+  nav>#mobileNav.view {
     right: 15%;
   }
-
   .socialHead {
     font-size: 1.5em;
     width: 100%;
     min-height: 200px;
   }
-
   .lead {
     font-size: 1.5em;
     width: 100%;
   }
-
-  .main > h2 {
+  .main>h2 {
     font-size: 1.5em;
   }
-
-  .main > a {
+  .main>a {
     font-size: 1.25em;
   }
-
-  .menu > h2 {
+  .menu>h2 {
     font-size: 1.75em;
   }
-
-  .menu > h3 {
+  .menu>h3 {
     font-size: 1.5em;
   }
-
-  .menu > p {
+  .menu>p {
     font-size: 1.25em;
   }
-
   .reviewItem {
     font-size: 1.5em;
   }
-
-  .photos > .items {
+  .photos>.items {
     width: 100%;
     height: 300px;
   }
-
   .contact {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
     align-items: center;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
   }
-
   .contact h3 {
     font-size: 1.5em;
   }
   .contact p {
     font-size: 1.25em;
   }
-
   .footer {
     text-align: center;
   }
-
   .footLinks {
     margin-bottom: 40px;
   }
-
   .footer:hover {
     height: 16em;
   }
-
 }
 
 @media (max-width: 580px) {
-
-  .title > .wh {
+  .title>.wh {
     font-size: 2em;
   }
-
-  .title > .whunder {
+  .title>.whunder {
     font-size: 1em;
   }
-
-  nav > .menuButton {
+  nav>.menuButton {
     font-size: 1em;
     margin-right: 15%;
   }
-
 }
 
 @media (max-width: 480px) {
-
-  .title > .wh {
+  .title>.wh {
     font-size: 1.25em;
   }
-  .title > .whunder {
+  .title>.whunder {
     font-size: 1em;
   }
-
-  nav > .menuButton {
+  nav>.menuButton {
     font-size: 1em;
   }
-
-  nav > #mobileNav {
+  nav>#mobileNav {
     font-size: 1.25em;
   }
-
-  nav > #mobileNav.view {
+  nav>#mobileNav.view {
     right: 20%;
   }
-
   .socialHead {
     font-size: 1.25em;
   }
-
   .lead {
     font-size: 1.25em;
   }
-
-  .main > h2 {
+  .main>h2 {
     font-size: 1.25em;
   }
-
-  .main > a {
+  .main>a {
     font-size: 1em;
   }
-
-  .menu > h2 {
+  .menu>h2 {
     font-size: 1.5em;
   }
-
-  .menu > h3 {
+  .menu>h3 {
     font-size: 1.25em;
   }
-
-  .menu > p {
+  .menu>p {
     font-size: 1em;
   }
-
   .reviewItem {
     font-size: 1.25em;
   }
-
   .contact h3 {
     font-size: 1.25em;
   }
   .contact p {
     font-size: 1em;
   }
-
 }
 
 @media (max-width: 380px) {
-
-  nav > .title {
+  nav>.title {
     margin-left: -5%;
   }
-
-  .title > .wh {
+  .title>.wh {
     font-size: 1em;
   }
-  .title > .whunder {
+  .title>.whunder {
     font-size: 0.75em;
   }
-
-  nav > .menuButton {
+  nav>.menuButton {
     font-size: 1em;
   }
-
-  nav > #mobileNav {
+  nav>#mobileNav {
     font-size: 1em;
   }
-
-  nav > #mobileNav.view {
+  nav>#mobileNav.view {
     right: 20%;
   }
-
   .socialHead {
     font-size: 1em;
   }
-
   .lead {
     font-size: 1em;
   }
-
-  .main > h2 {
+  .main>h2 {
     font-size: 1em;
   }
-
-  .main > a {
+  .main>a {
     font-size: 1em;
   }
-
-  .menu > h2 {
+  .menu>h2 {
     font-size: 1.25em;
   }
-
-  .menu > h3 {
+  .menu>h3 {
     font-size: 1em;
   }
-
-  .menu > p {
+  .menu>p {
     font-size: 1em;
   }
-
   .reviewItem {
     font-size: 1em;
   }
-
   .contact h3 {
     font-size: 1em;
   }
   .contact p {
     font-size: 1em;
   }
-
-  .footer > #button {
+  .footer>#button {
     left: 30%;
   }
-
-  .footLinks > p {
+  .footLinks>p {
     font-size: 0.75em;
   }
-
 }
 
-@media only screen and (min-device-width: 480px)
-                   and (max-device-width: 740px)
-                   and (orientation: landscape) {
-
+@media only screen and (min-device-width: 480px) and (max-device-width: 740px) and (orientation: landscape) {
   nav {
     padding: 10px;
   }
-
-  nav > .title {
+  nav>.title {
     margin-left: 10%;
   }
-
-  .title > .wh {
+  .title>.wh {
     font-size: 1.5em;
   }
-  .title > .whunder {
+  .title>.whunder {
     font-size: 1em;
   }
-
-  nav > .menuButton {
+  nav>.menuButton {
     font-size: 1em;
   }
-
-  nav > #mobileNav {
+  nav>#mobileNav {
     font-size: 1em;
   }
-
-  nav > #mobileNav.view {
+  nav>#mobileNav.view {
     right: 10%;
   }
-
   .banner {
     height: 200vh;
   }
-
   .socialHead {
     font-size: 1.25em;
   }
-
   .lead {
     font-size: 1.25em;
   }
-
-  .main > h2 {
+  .main>h2 {
     font-size: 1em;
   }
-
-  .main > a {
+  .main>a {
     font-size: 1em;
   }
-
-  .menu > h2 {
+  .menu>h2 {
     font-size: 1.25em;
   }
-
-  .menu > h3 {
+  .menu>h3 {
     font-size: 1em;
   }
-
-  .menu > p {
+  .menu>p {
     font-size: 1em;
   }
-
   .reviews {
     min-height: 120vh;
   }
-
   .reviews {
     min-height: 120vh;
   }
-
   .reviewItem {
     font-size: 1em;
   }
-
-  .photos > .items {
+  .photos>.items {
     width: 50%;
     height: 300px;
   }
-
   .contact h3 {
     font-size: 1em;
   }
   .contact p {
     font-size: 1em;
   }
-
-  .footer > #button {
+  .footer>#button {
     left: 30%;
   }
-
-  .footLinks > p {
+  .footLinks>p {
     font-size: 0.75em;
   }
-
 }
