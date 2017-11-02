@@ -33,3 +33,7 @@ $("#info").click(function() {
 $(".menuButton").click(function() {
     $("#mobileNav").toggleClass("view");
 });
+
+$("body").click(function() {
+    $("#mobileNav").removeClass("view");
+});
