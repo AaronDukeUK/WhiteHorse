@@ -842,6 +842,9 @@ nav>#mobileNav>li>a:hover {
   .photos>.items {
     width: 50%;
   }
+  .photos>.items>.linkItem {
+    background-color: rgba(38, 39, 47, 0);
+  }
   .contact {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
