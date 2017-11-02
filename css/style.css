@@ -1,6 +1,7 @@
 
 body {
   font-family: 'Playfair Display', serif;
+  font-size: 100%;
   color: #222222;
 }
 
@@ -18,9 +19,9 @@ nav {
   justify-content: space-between;
   font-family: 'Cinzel', serif;
   font-weight: bold;
-  height: 7.5em;
+  min-height: 10%;
   position: fixed;
-  width: 100vw;
+  width: 100%;
   transition: all 1s ease-in;
   z-index: 1000;
   background-color: #f5f5f5;
@@ -39,14 +40,12 @@ nav > .title {
 }
 
 .title > .wh {
-  font-size: 3em;
-  font-weight: 900;
-  text-shadow: 1px 1px 2px grey;
+  font-size: 2.5em;
+  font-weight: 600;
 }
 
 .title > .whunder {
-  text-shadow: 1px 1px 1px grey;
-  font-size: 1.8em;
+  font-size: 1.5em;
   font-family: 'Playfair Display', serif;
 }
 
@@ -55,7 +54,7 @@ nav > .menuButton {
   padding: 10px;
   border: 2px solid #444;
   border-radius: 5px;
-  margin-right: 120px;
+  margin-right: 8%;
   transition: 0.5s all linear;
   font-size: 1.5em;
 }
@@ -69,13 +68,13 @@ nav > .menuButton:hover {
 nav > #mobileNav {
   display: flex;
   position: absolute;
-  top: 132px;
-  right: -200px;
+  top: 120%;
+  right: -50%;
   flex-direction: column;
   align-items: center;
   font-size: 1.5em;
   justify-content: space-between;
-  height: 250px;
+  max-height: 250px;
   background-color: #999;
   opacity: 0.9;
   border: 2px solid white;
@@ -85,7 +84,7 @@ nav > #mobileNav {
 }
 
 nav > #mobileNav.view {
-right: 105px;
+right: 10%;
 transition: 0.5s all ease;
 }
 
@@ -110,7 +109,7 @@ nav > #mobileNav > li > a:hover {
 
 .banner {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-image: url("../img/view-min.jpg");
   background-position: center;
   background-size: cover;
@@ -130,7 +129,7 @@ nav > #mobileNav > li > a:hover {
   width: auto;
   padding: 20px 40px;
   color: white;
-  font-size: 1.75em;
+  font-size: 1.5em;
   opacity: 0.9;
   font-weight: bold;
   border: 2px solid white;
@@ -177,7 +176,7 @@ nav > #mobileNav > li > a:hover {
   width: auto;
   padding: 20px;
   color: white;
-  font-size: 1.75em;
+  font-size: 1.5em;
   opacity: 0.9;
   font-weight: bold;
   border: 2px solid white;
@@ -252,19 +251,19 @@ nav > #mobileNav > li > a:hover {
 
 .menu > h2 {
   margin: 20px 40px 20px 40px;
-  font-size: 2em;
+  font-size: 1.5em;
   font-style: italic;
 }
 
 .menu > h3 {
   margin: 40px;
-  font-size: 1.5em;
+  font-size: 1.25em;
   font-weight: bold;
 }
 
 .menu > p {
   margin: 4px;
-  font-size: 1.25em;
+  font-size: 1em;
 }
 
 .menu > p:last-child {
@@ -306,7 +305,7 @@ nav > #mobileNav > li > a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  font-size: 2em;
+  font-size: 1.5em;
   max-width: 80%;
   color: white;
   font-weight: bold;
@@ -436,12 +435,12 @@ nav > #mobileNav > li > a:hover {
 
 .contact h3 {
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1.25em;
   margin-bottom: 10px;
 }
 
 .contact p {
-  font-size: 1.25em;
+  font-size: 1em;
   padding: 2px;
 }
 
@@ -452,6 +451,7 @@ nav > #mobileNav > li > a:hover {
   border-radius: 5px;
   height: 400px;
   width: 25%;
+  max-width: 95%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -533,7 +533,7 @@ nav > #mobileNav > li > a:hover {
   opacity: 0.9;
   text-align: center;
   color: white;
-  margin-left: 90%;
+  left: 40%;
 }
 
 .footer > #button:hover {
@@ -582,34 +582,51 @@ nav > #mobileNav > li > a:hover {
   border-bottom: 2px solid grey;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1280px) {
   .title > .wh {
-    font-size: 2.4em;
+    font-size: 2em;
   }
   .title > .whunder {
-    font-size: 1.5em;
+    font-size: 1.25em;
   }
-  nav > ul {
-    font-size: 1.2em;
+
+  nav > .menuButton {
+    font-size: 1.25em;
+  }
+
+  nav > #mobileNav {
+    font-size: 1.25em;
   }
 
   .socialHead {
-    font-size: 1.5em;
+    font-size: 1.25em;
   }
   .lead {
+    font-size: 1.25em;
+  }
+
+  .main > h2 {
+    font-size: 1.25em;
+  }
+
+  .main > a {
+    font-size: 1em;
+  }
+
+  .menu > h2 {
     font-size: 1.5em;
   }
 
-  .menu {
-    font-size: 1.2em;
-    width: 90%;
-  }
   .menu > h3 {
-    font-size: 1.4em;
+    font-size: 1.25em;
+  }
+
+  .menu > p {
+    font-size: 1em;
   }
 
   .reviewItem {
-    font-size: 1.5em;
+    font-size: 1.25em;
   }
 
   .photos > .items {
@@ -625,15 +642,16 @@ nav > #mobileNav > li > a:hover {
     font-size: 1.5em;
   }
   .contact p {
-    font-size: 1.4em;
+    font-size: 1.25em;
   }
+
   .contact > .hours, .contact > .foodHours, .contact > .info {
-    width: 50%;
+    width: auto;
   }
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 980px) {
 
   .title > .wh {
     font-size: 2.5em;
@@ -641,23 +659,40 @@ nav > #mobileNav > li > a:hover {
   .title > .whunder {
     font-size: 1.5em;
   }
-  nav > ul {
-    font-size: 1.2em;
+
+  nav > .menuButton {
+    font-size: 1.5em;
+  }
+
+  nav > #mobileNav {
+    font-size: 1.5em;
   }
 
   .socialHead {
-    font-size: 1.4em;
+    font-size: 1.5em;
   }
   .lead {
-    font-size: 1.4em;
+    font-size: 1.5em;
   }
 
-  .menu {
-    font-size: 1.2em;
-    width: 90%;
+  .main > h2 {
+    font-size: 1.25em;
   }
+
+  .main > a {
+    font-size: 1em;
+  }
+
+  .menu > h2 {
+    font-size: 2em;
+  }
+
   .menu > h3 {
-    font-size: 1.4em;
+    font-size: 1.5em;
+  }
+
+  .menu > p {
+    font-size: 1.25em;
   }
 
   .reviewItem {
@@ -674,48 +709,266 @@ nav > #mobileNav > li > a:hover {
     justify-content: space-around;
   }
   .contact h3 {
-    font-size: 1.5em;
+    font-size: 1.75em;
   }
   .contact p {
-    font-size: 1.4em;
+    font-size: 1.5em;
   }
 
-  .footer > #button {
-    margin-left: 80%;
-  }
 }
 
-@media (max-width: 500px) {
-  nav {
-    height: 120px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    padding-left: 0;
+@media (max-width: 740px) {
+
+
+  .title > .wh {
+    font-size: 2.5em;
+  }
+  .title > .whunder {
+    font-size: 1.5em;
   }
 
   nav > .menuButton {
-    margin: 0;
-    font-size: 1.2em;
+    font-size: 1.5em;
   }
 
   nav > #mobileNav {
-    top: 140px;
-    font-size: 1.4em;
-    height: auto;
-
+    font-size: 1.5em;
   }
 
-  nav > #mobileNav > li {
-    padding: 10px;
+  nav > #mobileNav.view {
+    right: 15%;
+  }
+
+  .socialHead {
+    font-size: 1.5em;
+    width: 100%;
+    min-height: 200px;
+  }
+
+  .lead {
+    font-size: 1.5em;
+    width: 100%;
+  }
+
+  .main > h2 {
+    font-size: 1.5em;
+  }
+
+  .main > a {
+    font-size: 1.25em;
+  }
+
+  .menu > h2 {
+    font-size: 1.75em;
+  }
+
+  .menu > h3 {
+    font-size: 1.5em;
+  }
+
+  .menu > p {
+    font-size: 1.25em;
+  }
+
+  .reviewItem {
+    font-size: 1.5em;
+  }
+
+  .photos > .items {
+    width: 100%;
+    height: 300px;
+  }
+
+  .contact {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .contact h3 {
+    font-size: 1.5em;
+  }
+  .contact p {
+    font-size: 1.25em;
+  }
+
+  .footer {
     text-align: center;
   }
 
-  nav > #mobileNav > li > a {
-    padding: 5px 10px;
-    color: white;
-    transition: 0.5s all linear;
-    border-radius: 5px;
+  .footLinks {
+    margin-bottom: 40px;
+  }
+
+  .footer:hover {
+    height: 16em;
+  }
+
+}
+
+@media (max-width: 580px) {
+
+  .title > .wh {
+    font-size: 2em;
+  }
+
+  .title > .whunder {
+    font-size: 1em;
+  }
+
+  nav > .menuButton {
+    font-size: 1em;
+    margin-right: 15%;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .title > .wh {
+    font-size: 1.25em;
+  }
+  .title > .whunder {
+    font-size: 1em;
+  }
+
+  nav > .menuButton {
+    font-size: 1em;
+  }
+
+  nav > #mobileNav {
+    font-size: 1.25em;
+  }
+
+  nav > #mobileNav.view {
+    right: 20%;
+  }
+
+  .socialHead {
+    font-size: 1.25em;
+  }
+
+  .lead {
+    font-size: 1.25em;
+  }
+
+  .main > h2 {
+    font-size: 1.25em;
+  }
+
+  .main > a {
+    font-size: 1em;
+  }
+
+  .menu > h2 {
+    font-size: 1.5em;
+  }
+
+  .menu > h3 {
+    font-size: 1.25em;
+  }
+
+  .menu > p {
+    font-size: 1em;
+  }
+
+  .reviewItem {
+    font-size: 1.25em;
+  }
+
+  .contact h3 {
+    font-size: 1.25em;
+  }
+  .contact p {
+    font-size: 1em;
+  }
+
+}
+
+@media (max-width: 380px) {
+
+  nav > .title {
+    margin-left: -5%;
+  }
+
+  .title > .wh {
+    font-size: 1em;
+  }
+  .title > .whunder {
+    font-size: 0.75em;
+  }
+
+  nav > .menuButton {
+    font-size: 1em;
+  }
+
+  nav > #mobileNav {
+    font-size: 1em;
+  }
+
+  nav > #mobileNav.view {
+    right: 20%;
+  }
+
+  .socialHead {
+    font-size: 1em;
+  }
+
+  .lead {
+    font-size: 1em;
+  }
+
+  .main > h2 {
+    font-size: 1em;
+  }
+
+  .main > a {
+    font-size: 1em;
+  }
+
+  .menu > h2 {
+    font-size: 1.25em;
+  }
+
+  .menu > h3 {
+    font-size: 1em;
+  }
+
+  .menu > p {
+    font-size: 1em;
+  }
+
+  .reviewItem {
+    font-size: 1em;
+  }
+
+  .contact h3 {
+    font-size: 1em;
+  }
+  .contact p {
+    font-size: 1em;
+  }
+
+  .footer > #button {
+    left: 30%;
+  }
+
+  .footLinks > p {
+    font-size: 0.75em;
+  }
+
+}
+
+@media only screen and (min-device-width: 480px)
+                   and (max-device-width: 740px)
+                   and (orientation: landscape) {
+
+  nav {
+    padding: 10px;
+  }
+
+  nav > .title {
+    margin-left: 10%;
   }
 
   .title > .wh {
@@ -725,83 +978,80 @@ nav > #mobileNav > li > a:hover {
     font-size: 1em;
   }
 
-  .socialHead {
-    font-size: 1.25em;
-    width: 100%;
-    min-height: 200px;
-  }
-
-  .socialHead > h3 {
-    margin-top: -60px;
-  }
-  .lead {
-    font-size: 1.25em;
-    width: 100%;
-  }
-
-  .menu {
-    font-size: 1.2em;
-    width: 100%;
-    padding: 5px;
-  }
-  .menu > h3 {
-    font-size: 1.4em;
-  }
-
-  .menu > p {
-    font-size: 1.4em;
-    line-height: 25px;
-    width: 90%;
-  }
-
-  .reviewItem {
-    font-size: 1.4em;
-    width: 100%;
-  }
-
-  .photos > .items {
-    width: 100%;
-    height: 200px;
-  }
-
-  .contact {
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-  }
-  .contact h3 {
-    font-size: 1.4em;
-  }
-  .contact p {
-    font-size: 1.2em;
-  }
-
-  .contact > .hours, .contact > .foodHours, .contact > .info {
-    width: 100%;
-  }
-
-  .email > p > a {
+  nav > .menuButton {
     font-size: 1em;
   }
 
-  .footer {
-    text-align: center;
+  nav > #mobileNav {
+    font-size: 1em;
   }
 
-  .footLinks {
-    margin-bottom: 50px;
+  nav > #mobileNav.view {
+    right: 10%;
   }
 
-  .footer:hover {
-    height: 16em;
+  .banner {
+    height: 200vh;
+  }
+
+  .socialHead {
+    font-size: 1.25em;
+  }
+
+  .lead {
+    font-size: 1.25em;
+  }
+
+  .main > h2 {
+    font-size: 1em;
+  }
+
+  .main > a {
+    font-size: 1em;
+  }
+
+  .menu > h2 {
+    font-size: 1.25em;
+  }
+
+  .menu > h3 {
+    font-size: 1em;
+  }
+
+  .menu > p {
+    font-size: 1em;
+  }
+
+  .reviews {
+    min-height: 120vh;
+  }
+
+  .reviews {
+    min-height: 120vh;
+  }
+
+  .reviewItem {
+    font-size: 1em;
+  }
+
+  .photos > .items {
+    width: 50%;
+    height: 300px;
+  }
+
+  .contact h3 {
+    font-size: 1em;
+  }
+  .contact p {
+    font-size: 1em;
   }
 
   .footer > #button {
-    margin-left: 60%;
+    left: 30%;
   }
 
-  .footSocial > ul {
-    padding: 20px;
-    width: 200px;
+  .footLinks > p {
+    font-size: 0.75em;
   }
+
 }
